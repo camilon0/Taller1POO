@@ -135,9 +135,9 @@ public class Main {
 		System.out.println("La cuenta se encuentra: " +id.getAccount());
 		
 		/**
-         * Creación de un objeto de la clase persona.
+         * Creación de un objeto de la clase persona con los parametros enteros de la fecha de cumpleanhos.
          */
-		Person camilo=new Person();
+		Person camilo=new Person(1997, 10, 02);
 		/**
          * Establece el nombre de la persona.
          */
@@ -161,7 +161,7 @@ public class Main {
 		/**
          * Establece la fecha de cumpleaños de la persona.
          */
-		camilo.setDateBirth();
+		//camilo.setDateBirth();
 		
 		System.out.println("--CLASE PERSONA--");
 		/**
@@ -171,9 +171,11 @@ public class Main {
 		/**
          * Imprime el nombre, los dos apellidos, el tipo de sangre y su RH de la persona.
          */
-		System.out.println(camilo.getDateBirth());
+		
 		System.out.println("El nombre completo es " + camilo.getName() +" " +camilo.getLastName1() +" "+ camilo.getLastName2() + " "
 				+ "con un tipo de sangre "+ camilo.getBloodType() + camilo.getRH());
+		
+		System.out.println("La fecha de cumpleaños es: " + camilo.getDateBirth());
 	}
 	
 

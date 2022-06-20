@@ -1,6 +1,6 @@
 package Taller;
 
-import java.util.Date;
+import java.util.*;
 
 /**
  * Representa una persona y varias de sus características, atributos y métodos elementales.
@@ -26,10 +26,6 @@ class Person {
 	 */
 	private String lastName2;
 	/**
-	 * Representa la fecha de nacimiento de la persona.
-	 */
-	private Date dateBirth = new Date();
-	/**
 	 * Representa la altura de la persona.
 	 */
 	private float height;
@@ -42,14 +38,19 @@ class Person {
 	 */
 	protected String BloodType;
 	/**
+	 * Representa la fecha de nacimiento de la persona.
+	 */
+	private Date dateBirth;
+	/**
 	 * Representa el RH de la persona.
 	 */
 	protected String RH;
 	/**
-	 * Crea una instancia de la clase persona.
+	 * Crea una instancia de la clase persona, con los parametros enteros de la fecha de cumpleanhos.
 	 */
 	
-	public Person() {
+	
+	public Person(int agno, int mes, int dia) {
 		/**
 		 * Establece valores para el numero de identificacion de la persona.
 		 */
@@ -62,6 +63,9 @@ class Person {
 		 * Establece valores para el peso de la persona.
 		 */
 		weight = 75;
+		
+		GregorianCalendar calendario = new GregorianCalendar(agno, mes-1, dia);
+		dateBirth = calendario.getTime();
 		
 	}
 	/**
@@ -136,9 +140,10 @@ class Person {
 	}
 	/**
 	 * Establece el dia de cumpleaños de la persona
+	 * @param dateBirth 
 	 * @param dateBirth Cumpleaños de la persona
 	 */
-	public void setDateBirth() {
+	public void setDateBirth(Date dateBirth) {
 		this.dateBirth = dateBirth;
 	}
 	/**
