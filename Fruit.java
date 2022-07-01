@@ -22,7 +22,7 @@ class Fruit{
 	 */
 	public ArrayList<String> colors = new ArrayList<String>();
 	/**
-	 * Crea una instancia de la clase Fruta.
+	 * Crea un Constructor de la clase Fruta.
 	 */	
 	public Fruit() {
 		/**
